@@ -1,0 +1,160 @@
+@import 'tokens.css';
+@import 'typography.css';
+@import 'layout.css';
+@import 'components.css';
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-white);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Custom Base Styles */
+section {
+    position: relative;
+}
+
+.hero-gradient-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.text-white {
+    color: var(--color-white);
+}
+
+.text-gold {
+    color: var(--color-estate-gold);
+}
+
+.text-cream {
+    color: var(--color-estate-cream);
+}
+
+.bg-cream {
+    background-color: var(--color-estate-cream);
+}
+
+.bg-dark {
+    background-color: var(--color-black);
+}
+
+.border-gold {
+    border-color: var(--color-estate-gold);
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.z-20 {
+    z-index: 20;
+}
+
+.z-50 {
+    z-index: 50;
+}
+
+.pt-20 {
+    padding-top: 5rem;
+}
+
+.pb-24 {
+    padding-bottom: 6rem;
+}
+
+.py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.gap-16 {
+    gap: 4rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.grid-cols-12 {
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.grid-rows-12 {
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.col-span-8 {
+    grid-column: span 8 / span 8;
+}
+
+.col-span-5 {
+    grid-column: span 5 / span 5;
+}
+
+.col-span-6 {
+    grid-column: span 6 / span 6;
+}
+
+.row-span-8 {
+    grid-row: span 8 / span 8;
+}
+
+.row-span-4 {
+    grid-row: span 4 / span 4;
+}
+
+.row-span-5 {
+    grid-row: span 5 / span 5;
+}
+
+.col-start-4 {
+    grid-column-start: 4;
+}
+
+.col-start-7 {
+    grid-column-start: 7;
+}
+
+.row-start-5 {
+    grid-row-start: 5;
+}
+
+.row-start-8 {
+    grid-row-start: 8;
+}
+
+.shadow-2xl {
+    box-shadow: var(--shadow-2xl);
+}
+
+.border-8 {
+    border-width: 8px;
+}
+
+.border-white {
+    border-color: var(--color-white);
+}
