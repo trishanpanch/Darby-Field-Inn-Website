@@ -1,0 +1,144 @@
+:root {
+    --container-max-w-xs: 20rem;
+    --container-max-w-sm: 24rem;
+    --container-max-w-md: 28rem;
+    --container-max-w-lg: 32rem;
+    --container-max-w-xl: 36rem;
+    --container-max-w-2xl: 42rem;
+    --container-max-w-3xl: 48rem;
+    --container-max-w-4xl: 56rem;
+    --container-max-w-5xl: 64rem;
+    --container-max-w-6xl: 72rem;
+    --container-max-w-7xl: 80rem;
+    --grid-gap-1: 0.25rem;
+    --grid-gap-2: 0.5rem;
+    --grid-gap-4: 1rem;
+    --grid-gap-8: 2rem;
+    --grid-gap-12: 3rem;
+    --grid-gap-16: 4rem;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-max-w-7xl);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-6);
+    padding-right: var(--spacing-6);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mt-8 {
+    margin-top: var(--spacing-8);
+}
+
+.mt-12 {
+    margin-top: var(--spacing-12);
+}
+
+.mb-8 {
+    margin-bottom: var(--spacing-8);
+}
+
+.py-24 {
+    padding-top: var(--spacing-24);
+    padding-bottom: var(--spacing-24);
+}
+
+.px-6 {
+    padding-left: var(--spacing-6);
+    padding-right: var(--spacing-6);
+}
