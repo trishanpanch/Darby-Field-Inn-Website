@@ -38,15 +38,17 @@
             background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%);
         }
     </style>
+  <link rel="stylesheet" href="../design-system/css/scroll-experience.css">
+  <script src="../design-system/js/scroll-experience.js" defer></script>
 </head>
 <body class="font-sans bg-background-light dark:bg-background-dark text-estate-brown dark:text-gray-100 antialiased">
-<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm border-b border-gray-100 dark:border-zinc-800">
-<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-<div class="flex items-center gap-2">
+<nav class="site-nav fixed top-0 w-full z-50 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm border-b border-gray-100 dark:border-zinc-800">
+<div class="site-nav-inner max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="site-nav-brand flex items-center gap-2">
 <span class="material-symbols-outlined text-estate-gold" style="">landscape</span>
-<a href="../index.html" class="font-display text-xl tracking-tight font-bold hover:text-estate-gold transition-colors" style="">Darby Field Inn</a>
+<a href="../index.html" class="site-brand-text font-display text-xl tracking-tight font-bold hover:text-estate-gold transition-colors" style="">Darby Field Inn</a>
 </div>
-<div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium">
+<div class="site-nav-desktop hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium">
 <a class="hover:text-estate-gold transition-colors text-estate-gold" href="the-estate.html" style="">The Inn</a>
 <a class="hover:text-estate-gold transition-colors" href="../History%20page/history.html" style="">History</a>
 <a class="hover:text-estate-gold transition-colors" href="../Events%20page/events.html" style="">Events</a>
@@ -56,7 +58,7 @@
 </nav>
 <section class="relative h-[70vh] flex items-center pt-20">
 <div class="absolute inset-0 overflow-hidden">
-<img alt="Modern luxury mountain estate exterior wide angle" class="w-full h-full object-cover" src="https://a0.muscache.com/im/pictures/miso/Hosting-709580059103925346/original/07c9dd5d-b4fa-4cb6-b861-5eaceb1f4c41.jpeg?im_w=1200" style="">
+<img alt="Modern luxury mountain estate exterior wide angle" class="w-full h-full object-cover" data-scroll-parallax data-scroll-speed="0.15" src="https://a0.muscache.com/im/pictures/miso/Hosting-709580059103925346/original/07c9dd5d-b4fa-4cb6-b861-5eaceb1f4c41.jpeg?im_w=1200" style="">
 <div class="absolute inset-0 hero-gradient"></div>
 </div>
 <div class="relative max-w-7xl mx-auto px-6 w-full text-white text-center">
@@ -72,7 +74,7 @@
 <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div class="relative">
 <div class="aspect-[4/3] overflow-hidden shadow-2xl">
-<img alt="Littlefield's Tavern Entrance" class="w-full h-full object-cover" src="https://a0.muscache.com/im/pictures/miso/Hosting-709580059103925346/original/5dc7ee72-6402-426e-8379-e1f752d05e8b.jpeg?im_w=1200" style="">
+<img alt="Littlefield's Tavern Entrance" class="w-full h-full object-cover" data-scroll-parallax data-scroll-speed="0.1" src="https://a0.muscache.com/im/pictures/miso/Hosting-709580059103925346/original/5dc7ee72-6402-426e-8379-e1f752d05e8b.jpeg?im_w=1200" style="">
 </div>
 <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-tavern-blue/10 dark:bg-tavern-blue/20 -z-10"></div>
 </div>
@@ -102,7 +104,7 @@
 </div>
 <div class="relative">
 <div class="aspect-[4/3] overflow-hidden shadow-2xl">
-<img alt="The Suites Interior" class="w-full h-full object-cover" src="../assets/images/Darby%20bedroom.%202.avif" style="">
+<img alt="The Suites Interior" class="w-full h-full object-cover" data-scroll-parallax data-scroll-speed="0.12" src="../assets/images/Darby%20bedroom.%202.avif" style="">
 </div>
 <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-tavern-blue/10 dark:bg-tavern-blue/20 -z-10"></div>
 </div>
@@ -171,7 +173,7 @@
 </div>
 <div class="relative">
 <div class="aspect-[3/4] overflow-hidden shadow-2xl">
-<img alt="Estate pool and gardens" class="w-full h-full object-cover" src="../assets/images/Darby Pool.png" style="">
+<img alt="Estate pool and gardens" class="w-full h-full object-cover" data-scroll-parallax data-scroll-speed="0.14" src="../assets/images/Darby Pool.png" style="">
 </div>
 </div>
 </div>
@@ -197,7 +199,7 @@
             </button>
 </div>
 </div>
-<div class="absolute bottom-10 right-10 flex flex-col items-center justify-center w-20 h-20 rounded-full border border-estate-gold/30 bg-white/5 backdrop-blur-sm text-[10px] font-bold uppercase tracking-widest">
+<div class="capacity-badge absolute bottom-10 right-10 flex flex-col items-center justify-center w-20 h-20 rounded-full border border-estate-gold/30 bg-white/5 backdrop-blur-sm text-[10px] font-bold uppercase tracking-widest">
 <span class="text-estate-gold" style="">Capacity</span>
 <span class="text-lg" style="">26</span>
 <span class="text-estate-gold" style="">Guests</span>

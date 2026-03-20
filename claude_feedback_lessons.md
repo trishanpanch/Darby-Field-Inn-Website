@@ -11,3 +11,5 @@
 ## Communication & deliverables
 
 ## Risk & verification
+- Before attempting a remote GCP deploy, verify that the active `gcloud` account has IAM access to the target project, especially when multiple credentialed accounts exist locally.
+- If Cloud Run deployment succeeds but `allUsers` invoker binding is blocked by organization policy, use `--no-invoker-iam-check` on the service to make the URL public without relying on forbidden IAM members.
