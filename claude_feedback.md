@@ -80,3 +80,13 @@
 - Initial public access failed because the project/organization blocks `allUsers` IAM bindings, so `--allow-unauthenticated` could not finish the invoker grant.
 - Applied `gcloud run services update darby-field-inn-website --no-invoker-iam-check` to expose the service publicly without the forbidden IAM member.
 - Verified both Cloud Run URLs return `HTTP/2 200` after the invoker IAM check was disabled.
+
+---
+**Date:** 2026-03-20
+**Task:** Commit and push the current website changes to GitHub
+**Context:** Repo `trishanpanch/Darby-Field-Inn-Website`, local branch `master`, remote branch `main`
+
+### What Happened
+- Staged the current website, deployment, and feedback file changes from this session and committed them as `Improve responsiveness and add Cloud Run deploy setup`.
+- Pushed the local `HEAD` to `origin/main` successfully.
+- Resulting commit hash: `43eae92`.
