@@ -19,11 +19,11 @@
     /* Hero specific styles */
     .hero {
       position: relative;
-      height: var(--size-page-hero-height);
+      height: 70vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-top: var(--header-height);
+      padding-top: 5rem; /* pt-20 equivalent to account for fixed header */
       overflow: hidden;
     }
 
@@ -39,7 +39,7 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: var(--gradient-hero);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%);
       z-index: 1;
     }
 
@@ -76,24 +76,56 @@
        filter: grayscale(0%);
     }
 
+    .capacity-badge {
+      position: absolute;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(166, 137, 102, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      z-index: 20;
+    }
+
+    .capacity-badge span:not(.number) {
+      color: var(--color-estate-gold);
+    }
+
+    .capacity-badge .number {
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.75rem;
+      color: white;
+    }
   </style>
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="site-nav">
-    <div class="site-nav-inner">
-      <div class="site-nav-brand">
-        <span class="material-symbols-outlined text-gold">castle</span>
-        <a href="../index.html" class="font-display site-nav-brand-text"
-          style="color: inherit; text-decoration: none;">Darby Field Inn</a>
+  <nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm border-b border-gray-100 dark:border-zinc-800"
+    style="position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-gray-soft); height: 80px;">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between" style="height: 100%; display: flex; align-items: center; justify-content: space-between; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem;">
+      <div class="flex items-center gap-2" style="display: flex; align-items: center; gap: 8px;">
+        <span class="material-symbols-outlined text-gold">landscape</span>
+        <a href="../index.html" class="font-display text-xl tracking-tight font-bold"
+          style="font-family: var(--font-family-display); font-weight: bold; font-size: 1.25rem; letter-spacing: -0.025em; color: inherit; text-decoration: none;">Darby Field Inn</a>
       </div>
-      <div class="hidden md:flex site-nav-links">
-        <a href="../Estate%20page/the-estate.html" class="nav-link">The Inn</a>
-        <a href="history.html" class="nav-link" style="color: var(--color-estate-gold);">History</a>
-        <a href="../Events%20page/events.html" class="nav-link">Events</a>
-        <button class="button">Start Planning</button>
+      <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium" style="display: flex; align-items: center; gap: 2rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500;">
+        <a href="../Estate%20page/the-estate.html" class="nav-link" style="text-decoration: none; color: inherit; transition: color 0.2s;">The Inn</a>
+        <a href="history.html" class="nav-link" style="text-decoration: none; color: var(--color-estate-gold); transition: color 0.2s;">History</a>
+        <a href="../Events%20page/events.html" class="nav-link" style="text-decoration: none; color: inherit; transition: color 0.2s;">Events</a>
+        <button class="button">Book</button>
       </div>
     </div>
   </nav>
@@ -126,10 +158,13 @@
             Originally built in 1826, this historic property was born from a vision of being a mountain sanctuary.
           </p>
           <p style="margin-bottom: var(--spacing-6);">
-            Nestled in the heart of Albany, New Hampshire, The Darby Field Inn was privately owned until 1946, when it then served for generations as a beacon for travelers seeking the rugged beauty of the White Mountains and the warmth of a true colonial homestead.
+            Nestled in North Conway, New Hampshire, the property began its life as a mountain farm in the mid-19th century. Like many homesteads in the White Mountain National Forest area, it was a hard-scrabble existence. The original structure served as the residence for the Littlefield family until 1946, when it then served for generations as a beacon for travelers seeking the rugged beauty of the White Mountains and the warmth of a true colonial homestead.
+          </p>
+          <p style="margin-bottom: var(--spacing-6);">
+            The shift from agriculture to hospitality happened as North Conway became a premiere destination for skiing and summer hiking. It was during this era that the property was renamed after Darby Field, a legendary figure in New Hampshire history. The inn is named in honor of the Irish explorer who, in 1642, became the first European to climb Mount Washington (then called Agiocochook). Local folklore says he made the trek with the help of Abenaki guides, seeking "shining stones" he believed were diamonds (they turned out to be quartz).
           </p>
           <p>
-            Since then, the transformation into The Darby Field Inn was a labor of preservation. Every original timber, the grand fieldstone fireplaces, and the sprawling gardens were restored to maintain their "archival warmth"—the elusive feeling of a home that has been lived in, loved, and passed down for many years.
+            The transformation of the The Darby Field Inn has since been a labor of preservation. Every original timber, the grand fieldstone fireplaces, and the sprawling gardens were restored to maintain their "archival warmth"—the elusive feeling of a home that has been lived in, loved, and passed down for many years.
           </p>
 
         </div>
@@ -146,20 +181,27 @@
 
 
   <!-- Footer -->
-  <footer class="site-footer py-32 relative overflow-hidden">
-    <div class="site-footer-inner relative z-10">
+  <footer class="py-32 relative overflow-hidden" style="background-color: var(--color-estate-brown); color: white; display: flex; justify-content: center; align-items: center; text-align: center;">
+    <div class="relative z-10" style="max-width: 48rem; width: 100%; padding-left: 1.5rem; padding-right: 1.5rem; display: flex; flex-direction: column; align-items: center;">
       <div style="margin-bottom: 2rem;">
-        <span class="material-symbols-outlined text-gold site-footer-icon">landscape</span>
+        <span class="material-symbols-outlined text-gold" style="font-size: 2.25rem; color: var(--color-estate-gold);">landscape</span>
       </div>
-      <h2 class="font-display leading-tight" style="font-size: clamp(3rem, 5vw, 3.75rem); margin-bottom: 2rem; color: var(--color-text-inverse); text-align: center;">
+      <h2 class="font-display leading-tight" style="font-size: clamp(3rem, 5vw, 3.75rem); margin-bottom: 2rem; color: white; text-align: center;">
         Ready to <span class="serif-italic" style="color: var(--color-estate-gold);">Stay?</span>
       </h2>
-      <p class="text-muted" style="margin-bottom: 3rem; font-size: 1.125rem; font-weight: 300; font-family: var(--font-family-sans); text-align: center; max-width: 42rem;">
+      <p style="color: #9CA3AF; margin-bottom: 3rem; font-size: 1.125rem; font-weight: 300; font-family: var(--font-family-sans); text-align: center; max-width: 42rem;">
         Secure your dates for your stay at the Darby Field Inn.
       </p>
-      <button class="site-cta hover:bg-opacity-90 transition-all">
-        Inquire for Availability
-      </button>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <button class="hover:bg-opacity-90 transition-all" 
+                style="background-color: var(--color-primary); color: white; padding: 1.25rem 2.5rem; border: 1px solid var(--color-primary); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; cursor: pointer;">
+          Book
+        </button>
+        <button class="hover:bg-opacity-90 transition-all" onclick="openModal()"
+                style="background-color: var(--color-primary); color: white; padding: 1.25rem 2.5rem; border: 1px solid var(--color-primary); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; cursor: pointer;">
+          Contact Us
+        </button>
+      </div>
     </div>
 
     <div class="capacity-badge">
@@ -168,6 +210,45 @@
       <span>Guests</span>
     </div>
   </footer>
+
+  <div id="contactModal" tabindex="-1" aria-hidden="true" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1000; background-color: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; backdrop-filter: blur(4px);">
+      <div style="position: relative; padding: 1rem; width: 100%; max-width: 32rem; max-height: 100%;">
+          <div style="position: relative; background-color: white; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); border: 1px solid var(--color-estate-gold); border-radius: 2px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 1.5rem; border-bottom: 1px solid var(--color-gray-soft);">
+                  <h3 style="font-size: 1.5rem; font-weight: 600; color: #111827; font-family: var(--font-family-display);">
+                      Contact Us
+                  </h3>
+                  <button type="button" onclick="closeModal()" style="color: #9CA3AF; background: transparent; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem;">
+                      <svg style="width: 1rem; height: 1rem;" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                      </svg>
+                      <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Close modal</span>
+                  </button>
+              </div>
+              <div style="padding: 1.5rem;">
+                  <p style="font-size: 1rem; line-height: 1.7; color: #4B5563; font-family: var(--font-family-sans);">
+                      We are currently taking inquiries for all booking forms through our Airbnb listing. Please navigate through our booking links to find contact information and contact us through there. Thank you!
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script>
+    function openModal() {
+        document.getElementById('contactModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+        document.getElementById('contactModal').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    window.onclick = function(event) {
+        var modal = document.getElementById('contactModal');
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+  </script>
 
 </body>
 

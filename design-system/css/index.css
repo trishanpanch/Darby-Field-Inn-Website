@@ -11,7 +11,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--color-background);
+    background-color: var(--color-white);
 }
 
 img {
@@ -30,7 +30,7 @@ section {
 }
 
 .hero-gradient-overlay {
-    background: var(--gradient-hero);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.4) 100%);
 }
 
 .text-white {
@@ -67,173 +67,6 @@ section {
 
 .z-50 {
     z-index: 50;
-}
-
-.hero-overlay {
-    background: var(--gradient-hero);
-}
-
-.section {
-    position: relative;
-}
-
-.section-pad {
-    padding-top: var(--section-pad);
-    padding-bottom: var(--section-pad);
-}
-
-.site-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: var(--z-nav);
-    background: var(--color-nav-bg);
-    backdrop-filter: var(--backdrop-nav);
-    -webkit-backdrop-filter: var(--backdrop-nav);
-    border-bottom: var(--border-width-subtle) solid var(--color-nav-border);
-    height: var(--header-height);
-}
-
-.site-nav-inner {
-    max-width: var(--container-max-w-7xl);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--spacing-6);
-    padding-right: var(--spacing-6);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.site-nav-brand {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-2);
-}
-
-.site-nav-brand-text {
-    font-family: var(--font-family-display);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-xl);
-    letter-spacing: -0.025em;
-}
-
-.site-nav-links {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-8);
-}
-
-.site-nav-links,
-.site-nav-links .nav-link {
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-tighter);
-}
-
-.site-nav-links .nav-link {
-    font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-medium);
-}
-
-.site-page-offset {
-    padding-top: var(--header-height);
-}
-
-.hero {
-    height: var(--size-hero-image-height);
-}
-
-.hero-small {
-    height: var(--size-page-hero-height);
-}
-
-.text-muted {
-    color: var(--color-text-muted);
-}
-
-.eyebrow {
-    font-size: var(--font-size-10px);
-    color: var(--color-estate-gold);
-    font-weight: var(--font-weight-bold);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-widest);
-    display: inline-block;
-}
-
-.section-footer,
-.site-footer {
-    background-color: var(--color-footer-bg);
-    color: var(--color-text-inverse);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.site-footer-inner {
-    max-width: 48rem;
-    width: 100%;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.site-footer-icon {
-    font-size: 2.25rem;
-    color: var(--color-estate-gold);
-}
-
-.site-cta {
-    background: var(--color-primary);
-    color: var(--color-white);
-    border: var(--border-width-subtle) solid var(--color-primary);
-    padding: 1.25rem 2.5rem;
-    font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-bold);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-widest);
-    cursor: pointer;
-}
-
-.capacity-badge {
-    position: absolute;
-    bottom: 2.5rem;
-    right: 2.5rem;
-    width: var(--size-capacity-badge);
-    height: var(--size-capacity-badge);
-    border-radius: var(--radius-pill);
-    border: var(--border-width-subtle) solid var(--color-capacity-badge-border);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-capacity-badge-bg);
-    backdrop-filter: blur(8px);
-    font-size: var(--font-size-10px);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-tighter);
-    font-weight: 700;
-    z-index: var(--z-overlay);
-}
-
-.capacity-badge span:not(.number) {
-    color: var(--color-estate-gold);
-}
-
-.capacity-badge .number {
-    font-size: var(--size-capacity-number);
-    font-weight: var(--font-weight-bold);
-    line-height: 1.75rem;
-    color: var(--color-white);
-}
-
-.card-overlay {
-    background: var(--gradient-card-overlay);
-    color: var(--color-white);
 }
 
 .pt-20 {

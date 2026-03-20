@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darby Field Inn | Luxury Mountain Retreat</title>
+  <meta name="description"
+    content="Exclusive hospitality for groups of up to 26 in the heart of Albany, New Hampshire. Your private sanctuary in the White Mountains.">
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="design-system/css/index.css">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+
+  <style>
+    /* Hero specific styles */
+    .hero {
+      background: url('assets/images/Darby home hero.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-content {
+      z-index: 2;
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Stats Item */
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: var(--font-size-5xl);
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-2);
+      font-family: var(--font-family-display);
+    }
+
+    .stat-label {
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-bold);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--color-gray-dark);
+    }
+
+    /* Card Image Overlays */
+    .card-grid-item {
+      position: relative;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .card-grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    .card-grid-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: var(--spacing-8);
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      color: var(--color-white);
+    }
+
+    /* Capacity Badge */
+    .capacity-badge {
+      position: absolute;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(166, 137, 102, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      z-index: 20;
+    }
+
+    .capacity-badge span:not(.number) {
+      color: var(--color-estate-gold);
+    }
+
+    .capacity-badge .number {
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.75rem;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm border-b border-gray-100 dark:border-zinc-800"
+    style="position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-gray-soft); height: 80px;">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between" style="height: 100%; display: flex; align-items: center; justify-content: space-between; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem;">
+      <div class="flex items-center gap-2" style="display: flex; align-items: center; gap: 8px;">
+        <span class="material-symbols-outlined text-gold">castle</span>
+        <span class="font-display text-xl tracking-tight font-bold"
+          style="font-family: var(--font-family-display); font-weight: bold; font-size: 1.25rem; letter-spacing: -0.025em;">Darby Field Inn</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium" style="display: flex; align-items: center; gap: 2rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500;">
+        <a href="Estate%20page/the-estate.html" class="nav-link" style="text-decoration: none; color: inherit; transition: color 0.2s;">The Inn</a>
+        <a href="History%20page/history.html" class="nav-link" style="text-decoration: none; color: inherit; transition: color 0.2s;">History</a>
+        <a href="Events%20page/events.html" class="nav-link" style="text-decoration: none; color: inherit; transition: color 0.2s;">Events</a>
+        <button class="button">Start Planning</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-gradient-overlay absolute inset-0"></div>
+    <div class="container hero-content text-white">
+      <h1
+        style="font-family: var(--font-family-display); font-size: 6rem; max-width: 900px; line-height: 1.1; color: var(--color-white); text-shadow: 0 4px 15px rgba(0,0,0,0.6);">
+        Your <span class="serif-italic" style="color: var(--color-estate-cream);">Private</span><br>Mountain Estate
+      </h1>
+      <p class="uppercase-tracking-wide"
+        style="font-size: clamp(1.125rem, 1.8vw, 1.5rem); margin-top: var(--spacing-8); max-width: 720px; opacity: 0.95; font-weight: 500; letter-spacing: 0.12em; line-height: 1.6; text-shadow: 0 2px 10px rgba(0,0,0,0.45);">
+        Exclusive hospitality for groups of up to 26 in the heart of Albany, New Hampshire.
+      </p>
+      <div style="margin-top: var(--spacing-12);">
+        <span class="material-symbols-outlined animate-float"
+          style="font-size: 3rem; font-weight: 300;">expand_more</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concept Section -->
+  <section class="py-24">
+    <div class="container grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="badge" style="margin-bottom: var(--spacing-4);">The Concept</span>
+        <h2 style="font-size: var(--font-size-6xl); margin-bottom: var(--spacing-8);">
+          Not a hotel.<br><span class="serif-italic text-gold">A Home.</span>
+        </h2>
+        <div style="color: var(--color-text-body); font-size: var(--font-size-lg); line-height: 1.7;">
+          <p style="margin-bottom: var(--spacing-6);">
+            For generations, The Darby Field Inn has stood watch over the White Mountains. 
+            We have reimagined this historic property as a private sanctuary for many to enjoy.
+          </p>
+          <p style="margin-bottom: var(--spacing-6);">
+            What we offer: exclusivity. The Littlefield Tavern becomes your private bar. 
+            The pool and expansive backyard are yours alone. The 13 unique suites are reserved solely for your party.
+          </p>
+          <p>
+            It is the feeling of inheriting a grand colonial estate for the weekend, 
+            helping create lasting memories for all who can enjoy.
+          </p>
+        </div>
+        <button class="button" style="margin-top: var(--spacing-10);">Start Planning</button>
+      </div>
+
+      <!-- Overlapping Images -->
+      <div class="grid grid-cols-12 grid-rows-12 gap-4 h-[600px] relative">
+        <div class="col-span-8 row-span-8 overflow-hidden" style="box-shadow: var(--shadow-xl);">
+          <img
+            src="assets/images/Darby house winter.avif"
+            alt="Darby Field Inn in winter">
+        </div>
+        <div class="col-start-4 col-span-5 row-start-5 row-span-4 z-10 border-8 border-white shadow-2xl">
+          <img
+            src="assets/images/Darby fireplace new.png"
+            alt="Cozy fireplace detail">
+        </div>
+        <div class="col-start-7 col-span-6 row-start-8 row-span-5 z-20 border-8 border-white shadow-2xl">
+          <img
+            src="assets/images/Darby tavern bar new.png"
+            alt="The Littlefield Tavern bar">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-24"
+    style="background-color: var(--color-estate-cream); border-top: 1px solid var(--color-gray-soft); border-bottom: 1px solid var(--color-gray-soft);">
+    <div class="container grid grid-cols-4 gap-12">
+      <div class="stat-item">
+        <div class="stat-value">13</div>
+        <div class="stat-label">Bedrooms</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">26</div>
+        <div class="stat-label">Max Guests</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">1826</div>
+        <div class="stat-label">Built</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">1</div>
+        <div class="stat-label">Private Estate</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spaces Section -->
+  <section class="py-24">
+    <div class="container">
+      <div
+        style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: var(--spacing-16);">
+        <h2 style="font-size: var(--font-size-5xl);">Curated for <span class="serif-italic">Gathering</span></h2>
+        <a href="Estate%20page/the-estate.html" class="nav-link"
+          style="display: flex; align-items: center; gap: 8px; color: var(--color-estate-gold);">
+          Explore the Space
+          <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Tavern -->
+        <div class="card-grid-item">
+          <img
+            src="assets/images/Darby Tavern.avif"
+            alt="Littlefield Tavern">
+          <div class="card-overlay">
+            <span class="uppercase-tracking"
+              style="font-size: 10px; color: var(--color-estate-gold); font-weight: bold;">The Tavern</span>
+            <h3 style="color: white; font-size: var(--font-size-2xl); margin-top: 5px;">Littlefield Tavern</h3>
+          </div>
+        </div>
+
+        <!-- Grounds -->
+        <div class="card-grid-item">
+          <img
+            src="assets/images/Darby Pool.png"
+            alt="Gardens & Pool">
+          <div class="card-overlay">
+            <span class="uppercase-tracking"
+              style="font-size: 10px; color: var(--color-estate-gold); font-weight: bold;">The Grounds</span>
+            <h3 style="color: white; font-size: var(--font-size-2xl); margin-top: 5px;">Pool</h3>
+          </div>
+        </div>
+
+        <!-- Suites -->
+        <div class="card-grid-item">
+          <img
+            src="assets/images/Darby Bedroom.avif"
+            alt="The Suites">
+          <div class="card-overlay">
+            <span class="uppercase-tracking"
+              style="font-size: 10px; color: var(--color-estate-gold); font-weight: bold;">Rest</span>
+            <h3 style="color: white; font-size: var(--font-size-2xl); margin-top: 5px;">The Suites</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-32 relative overflow-hidden" style="background-color: var(--color-estate-brown); color: white; display: flex; justify-content: center; align-items: center; text-align: center;">
+    <div class="relative z-10" style="max-width: 48rem; width: 100%; padding-left: 1.5rem; padding-right: 1.5rem; display: flex; flex-direction: column; align-items: center;">
+      <div style="margin-bottom: 2rem;">
+        <span class="material-symbols-outlined text-4xl text-gold" style="font-size: 2.25rem; color: var(--color-estate-gold);">landscape</span>
+      </div>
+      <h2 class="font-display leading-tight" style="font-size: clamp(3rem, 5vw, 3.75rem); margin-bottom: 2rem; color: white; text-align: center;">
+        Ready to <span class="serif-italic" style="color: var(--color-estate-gold);">Stay?</span>
+      </h2>
+      <p style="color: #9CA3AF; margin-bottom: 3rem; font-size: 1.125rem; font-weight: 300; font-family: var(--font-family-sans); text-align: center; max-width: 42rem;">
+        Secure your dates for your stay at the Darby Field Inn.
+      </p>
+      <button class="hover:bg-opacity-90 transition-all" 
+              style="background-color: var(--color-primary); color: white; padding: 1.25rem 2.5rem; border: 1px solid var(--color-primary); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; cursor: pointer;">
+        Inquire for Availability
+      </button>
+    </div>
+
+    <div class="capacity-badge">
+      <span>Capacity</span>
+      <span class="number">26</span>
+      <span>Guests</span>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -7,7 +7,6 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
-<link rel="stylesheet" href="../design-system/css/index.css">
 <script>
         tailwind.config = {
             darkMode: "class",
@@ -36,26 +35,26 @@
 <style>
         .serif-italic { font-style: italic; }
         .hero-gradient {
-            background: var(--gradient-hero);
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%);
         }
     </style>
 </head>
 <body class="font-sans bg-background-light dark:bg-background-dark text-estate-brown dark:text-gray-100 antialiased">
-<nav class="site-nav">
-<div class="site-nav-inner">
-<div class="site-nav-brand">
-<span class="material-symbols-outlined text-gold" style="">castle</span>
-<a href="../index.html" class="font-display site-nav-brand-text" style="color: inherit; text-decoration: none;">Darby Field Inn</a>
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm border-b border-gray-100 dark:border-zinc-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-estate-gold" style="">landscape</span>
+<a href="../index.html" class="font-display text-xl tracking-tight font-bold hover:text-estate-gold transition-colors" style="">Darby Field Inn</a>
 </div>
-<div class="hidden md:flex site-nav-links">
-<a class="nav-link" href="the-estate.html" style="color: var(--color-estate-gold);">The Inn</a>
-<a class="nav-link" href="../History%20page/history.html" style="">History</a>
-<a class="nav-link" href="../Events%20page/events.html" style="">Events</a>
-<button class="site-cta">Start Planning</button>
+<div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium">
+<a class="hover:text-estate-gold transition-colors text-estate-gold" href="the-estate.html" style="">The Inn</a>
+<a class="hover:text-estate-gold transition-colors" href="../History%20page/history.html" style="">History</a>
+<a class="hover:text-estate-gold transition-colors" href="../Events%20page/events.html" style="">Events</a>
+<button class="bg-primary text-white px-6 py-3 hover:bg-opacity-90 transition-all" style="">Book</button>
 </div>
 </div>
 </nav>
-<section class="relative hero-small site-page-offset flex items-center">
+<section class="relative h-[70vh] flex items-center pt-20">
 <div class="absolute inset-0 overflow-hidden">
 <img alt="Modern luxury mountain estate exterior wide angle" class="w-full h-full object-cover" src="https://a0.muscache.com/im/pictures/miso/Hosting-709580059103925346/original/07c9dd5d-b4fa-4cb6-b861-5eaceb1f4c41.jpeg?im_w=1200" style="">
 <div class="absolute inset-0 hero-gradient"></div>
@@ -86,6 +85,26 @@
 <p class="" style="">Step into history in our fully restored private tavern. Originally serving weary travelers of the White Mountains, it now serves as the exclusive social hub for your group.</p>
 <p class="" style="">Featuring original stonework, a bespoke bar setup, and cozy seating areas, it's the perfect setting for evening cocktails, fireside stories, or an intimate private dining experience.</p>
 </div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-zinc-950">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-tavern-blue uppercase tracking-widest text-xs font-bold block mb-4" style="">Accommodations</span>
+<h2 class="font-display text-5xl md:text-6xl mb-8 leading-tight" style="">
+                    The <span class="serif-italic text-tavern-blue" style="">Suites</span>
+</h2>
+<div class="space-y-6 text-gray-600 dark:text-gray-400 leading-relaxed text-lg max-w-lg">
+<p class="" style="">Step into comfort in our 13 unique suites. Each room is a blend of historic charm and cozy vibe, with a common goal to provide the ultimate private sanctuary for your party.</p>
+<p class="" style="">Featuring plush bedding, elegant decor, and scenic views of the White Mountains, our suites offer a restful retreat for up to 26 guests after a day of adventure.</p>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-[4/3] overflow-hidden shadow-2xl">
+<img alt="The Suites Interior" class="w-full h-full object-cover" src="../assets/images/Darby%20bedroom.%202.avif" style="">
+</div>
+<div class="absolute -bottom-6 -right-6 w-48 h-48 bg-tavern-blue/10 dark:bg-tavern-blue/20 -z-10"></div>
 </div>
 </div>
 </section>
@@ -158,25 +177,70 @@
 </div>
 </div>
 </section>
-<footer class="site-footer py-32 relative overflow-hidden">
-<div class="site-footer-inner max-w-3xl relative z-10">
+<footer class="bg-estate-brown dark:bg-black text-white py-32 relative overflow-hidden">
+<div class="max-w-3xl mx-auto px-6 text-center relative z-10">
 <div class="flex justify-center mb-8">
-<span class="material-symbols-outlined site-footer-icon" style="">landscape</span>
+<span class="material-symbols-outlined text-4xl text-estate-gold" style="">landscape</span>
 </div>
 <h2 class="font-display text-5xl md:text-6xl mb-8 leading-tight" style="">
-                Ready to <span class="serif-italic text-gold" style="">Stay?</span>
+                Ready to <span class="serif-italic text-estate-gold" style="">Stay?</span>
 </h2>
-<p class="text-muted mb-12 text-lg font-light" style="">
+<p class="text-gray-400 mb-12 text-lg font-light" style="">
                 Secure your dates for your stay at the Darby Field Inn.
             </p>
-<button class="site-cta hover:bg-opacity-90 transition-all" style="">
-                Inquire for Availability
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+<button class="bg-primary text-white px-10 py-5 tracking-[0.2em] text-xs font-bold hover:bg-opacity-90 transition-all border border-primary" style="">
+                Book
+            </button>
+<button class="bg-primary text-white px-10 py-5 tracking-[0.2em] text-xs font-bold hover:bg-opacity-90 transition-all border border-primary" onclick="openModal()" style="">
+                Contact Us
             </button>
 </div>
-<div class="capacity-badge">
-<span style="">Capacity</span>
-<span class="number" style="">26</span>
-<span style="">Guests</span>
+</div>
+<div class="absolute bottom-10 right-10 flex flex-col items-center justify-center w-20 h-20 rounded-full border border-estate-gold/30 bg-white/5 backdrop-blur-sm text-[10px] font-bold uppercase tracking-widest">
+<span class="text-estate-gold" style="">Capacity</span>
+<span class="text-lg" style="">26</span>
+<span class="text-estate-gold" style="">Guests</span>
 </div>
 </footer>
+
+  <div id="contactModal" tabindex="-1" aria-hidden="true" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1000; background-color: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; backdrop-filter: blur(4px);">
+      <div style="position: relative; padding: 1rem; width: 100%; max-width: 32rem; max-height: 100%;">
+          <div style="position: relative; background-color: white; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); border: 1px solid var(--color-estate-gold); border-radius: 2px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 1.5rem; border-bottom: 1px solid var(--color-gray-soft);">
+                  <h3 style="font-size: 1.5rem; font-weight: 600; color: #111827; font-family: var(--font-family-display);">
+                      Contact Us
+                  </h3>
+                  <button type="button" onclick="closeModal()" style="color: #9CA3AF; background: transparent; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem;">
+                      <svg style="width: 1rem; height: 1rem;" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                      </svg>
+                      <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Close modal</span>
+                  </button>
+              </div>
+              <div style="padding: 1.5rem;">
+                  <p style="font-size: 1rem; line-height: 1.7; color: #4B5563; font-family: var(--font-family-sans);">
+                      We are currently taking inquiries for all booking forms through our Airbnb listing. Please navigate through our booking links to find contact information and contact us through there. Thank you!
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script>
+    function openModal() {
+        document.getElementById('contactModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+        document.getElementById('contactModal').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    window.onclick = function(event) {
+        var modal = document.getElementById('contactModal');
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+  </script>
+
 </body></html>
