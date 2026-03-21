@@ -93,38 +93,6 @@
       color: var(--color-white);
     }
 
-    /* Capacity Badge */
-    .capacity-badge {
-      position: absolute;
-      bottom: 2.5rem;
-      right: 2.5rem;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 9999px;
-      border: 1px solid rgba(166, 137, 102, 0.3);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(8px);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 700;
-      z-index: 20;
-    }
-
-    .capacity-badge span:not(.number) {
-      color: var(--color-estate-gold);
-    }
-
-    .capacity-badge .number {
-      font-size: 1.125rem;
-      font-weight: 700;
-      line-height: 1.75rem;
-      color: white;
-    }
   </style>
 </head>
 
@@ -143,7 +111,8 @@
         <a href="Estate%20page/the-estate.html" class="nav-link" style="text-decoration: none; color: inherit; transition: color 0.2s;">The Inn</a>
         <a href="History%20page/history.html" class="nav-link" style="text-decoration: none; color: inherit; transition: color 0.2s;">History</a>
         <a href="Events%20page/events.html" class="nav-link" style="text-decoration: none; color: inherit; transition: color 0.2s;">Events</a>
-        <button class="button">Start Planning</button>
+        <a class="button" href="https://www.airbnb.com/rooms/709580059103925346?source_impression_id=p3_1774135231_P3nJDFWGolF8yGQc"
+          target="_blank" rel="noopener noreferrer">Start Planning</a>
       </div>
     </div>
   </nav>
@@ -156,10 +125,11 @@
         style="font-family: var(--font-family-display); font-size: 6rem; max-width: 900px; line-height: 1.1; color: var(--color-white); text-shadow: 0 4px 15px rgba(0,0,0,0.6);">
         Your <span class="serif-italic" style="color: var(--color-estate-cream);">Private</span><br>Mountain Estate
       </h1>
-      <p class="uppercase-tracking-wide"
-        style="font-size: clamp(1.125rem, 1.8vw, 1.5rem); margin-top: var(--spacing-8); max-width: 720px; opacity: 0.95; font-weight: 500; letter-spacing: 0.12em; line-height: 1.6; text-shadow: 0 2px 10px rgba(0,0,0,0.45);">
-        Exclusive hospitality for groups of up to 26 in the heart of Albany, New Hampshire.
-      </p>
+      <div class="hero-copy-panel">
+        <p class="hero-copy uppercase-tracking-wide">
+          Exclusive hospitality for groups of up to 26 in the heart of Albany, New Hampshire.
+        </p>
+      </div>
       <div style="margin-top: var(--spacing-12);">
         <span class="material-symbols-outlined animate-float"
           style="font-size: 3rem; font-weight: 300;">expand_more</span>
@@ -189,7 +159,8 @@
             helping create lasting memories for all who can enjoy.
           </p>
         </div>
-        <button class="button" style="margin-top: var(--spacing-10);">Start Planning</button>
+        <a class="button" href="https://www.airbnb.com/rooms/709580059103925346?source_impression_id=p3_1774135231_P3nJDFWGolF8yGQc"
+          target="_blank" rel="noopener noreferrer" style="margin-top: var(--spacing-10);">Start Planning</a>
       </div>
 
       <!-- Overlapping Images -->
@@ -242,11 +213,6 @@
       <div
         style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: var(--spacing-16);">
         <h2 style="font-size: var(--font-size-5xl);">Curated for <span class="serif-italic">Gathering</span></h2>
-        <a href="Estate%20page/the-estate.html" class="nav-link"
-          style="display: flex; align-items: center; gap: 8px; color: var(--color-estate-gold);">
-          Explore the Space
-          <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
-        </a>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -263,7 +229,7 @@
         </div>
 
         <!-- Grounds -->
-        <div class="card-grid-item">
+        <a href="Estate%20page/the-estate.html" class="card-grid-item block" aria-label="Visit The Inn">
           <img
             src="assets/images/Darby Pool.png"
             alt="Gardens & Pool">
@@ -272,10 +238,10 @@
               style="font-size: 10px; color: var(--color-estate-gold); font-weight: bold;">The Grounds</span>
             <h3 style="color: white; font-size: var(--font-size-2xl); margin-top: 5px;">Pool</h3>
           </div>
-        </div>
+        </a>
 
         <!-- Suites -->
-        <div class="card-grid-item">
+        <a href="Estate%20page/the-estate.html" class="card-grid-item block" aria-label="Visit The Inn">
           <img
             src="assets/images/Darby Bedroom.avif"
             alt="The Suites">
@@ -284,7 +250,7 @@
               style="font-size: 10px; color: var(--color-estate-gold); font-weight: bold;">Rest</span>
             <h3 style="color: white; font-size: var(--font-size-2xl); margin-top: 5px;">The Suites</h3>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -301,17 +267,12 @@
       <p style="color: #9CA3AF; margin-bottom: 3rem; font-size: 1.125rem; font-weight: 300; font-family: var(--font-family-sans); text-align: center; max-width: 42rem;">
         Secure your dates for your stay at the Darby Field Inn.
       </p>
-      <button class="hover:bg-opacity-90 transition-all" 
-              style="background-color: var(--color-primary); color: white; padding: 1.25rem 2.5rem; border: 1px solid var(--color-primary); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; cursor: pointer;">
+      <a href="https://www.airbnb.com/rooms/709580059103925346?source_impression_id=p3_1774135231_P3nJDFWGolF8yGQc"
+        class="hover:bg-opacity-90 transition-all footer-cta-btn" target="_blank" rel="noopener noreferrer">
         Inquire for Availability
-      </button>
+      </a>
     </div>
 
-    <div class="capacity-badge">
-      <span>Capacity</span>
-      <span class="number">26</span>
-      <span>Guests</span>
-    </div>
   </footer>
 
 </body>

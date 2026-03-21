@@ -76,37 +76,6 @@
        filter: grayscale(0%);
     }
 
-    .capacity-badge {
-      position: absolute;
-      bottom: 2.5rem;
-      right: 2.5rem;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 9999px;
-      border: 1px solid rgba(166, 137, 102, 0.3);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(8px);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 700;
-      z-index: 20;
-    }
-
-    .capacity-badge span:not(.number) {
-      color: var(--color-estate-gold);
-    }
-
-    .capacity-badge .number {
-      font-size: 1.125rem;
-      font-weight: 700;
-      line-height: 1.75rem;
-      color: white;
-    }
   </style>
 </head>
 
@@ -125,7 +94,8 @@
         <a href="../Estate%20page/the-estate.html" class="nav-link" style="text-decoration: none; color: inherit; transition: color 0.2s;">The Inn</a>
         <a href="history.html" class="nav-link" style="text-decoration: none; color: var(--color-estate-gold); transition: color 0.2s;">History</a>
         <a href="../Events%20page/events.html" class="nav-link" style="text-decoration: none; color: inherit; transition: color 0.2s;">Events</a>
-        <button class="button">Start Planning</button>
+        <a class="button" href="https://www.airbnb.com/rooms/709580059103925346?source_impression_id=p3_1774135231_P3nJDFWGolF8yGQc"
+          target="_blank" rel="noopener noreferrer">Start Planning</a>
       </div>
     </div>
   </nav>
@@ -189,17 +159,12 @@
       <p style="color: #9CA3AF; margin-bottom: 3rem; font-size: 1.125rem; font-weight: 300; font-family: var(--font-family-sans); text-align: center; max-width: 42rem;">
         Secure your dates for your stay at the Darby Field Inn.
       </p>
-      <button class="hover:bg-opacity-90 transition-all" 
-              style="background-color: var(--color-primary); color: white; padding: 1.25rem 2.5rem; border: 1px solid var(--color-primary); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; cursor: pointer;">
+      <a href="https://www.airbnb.com/rooms/709580059103925346?source_impression_id=p3_1774135231_P3nJDFWGolF8yGQc"
+        class="hover:bg-opacity-90 transition-all footer-cta-btn" target="_blank" rel="noopener noreferrer">
         Inquire for Availability
-      </button>
+      </a>
     </div>
 
-    <div class="capacity-badge">
-      <span>Capacity</span>
-      <span class="number">26</span>
-      <span>Guests</span>
-    </div>
   </footer>
 
 </body>
